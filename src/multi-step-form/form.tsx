@@ -24,10 +24,10 @@ function PersonalInformation() {
       <h1>Personal Information</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
         <h1>name</h1>
-        <input type="text" {...register("name")} className="border" />
+        <input type="text" placeholder="name" {...register("name")} className="border" />
 
         <h1>email</h1>
-        <input type="text" {...register("email")} className="border" />
+        <input type="text" placeholder="email" {...register("email")} className="border" />
         <button type="submit" className="border">Next</button>
       </form>
       <ul>
@@ -52,12 +52,9 @@ function Address() {
   })
 
   const onSubmit: SubmitHandler<AddressFormData> = (data) => {
-    console.log("chamou data: ", data)
     updateFormData(data)
     handleStepChange("next")
   }
-
-  console.log("errors: ", errors)
 
   return (
     <div>
@@ -94,7 +91,6 @@ function Preferences() {
   })
 
   const onSubmit: SubmitHandler<PreferencesFormData> = (data) => {
-    console.log("preferences form", data)
     updateFormData(data)
     handleStepChange("next")
   }
