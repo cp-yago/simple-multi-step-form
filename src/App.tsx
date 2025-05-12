@@ -1,6 +1,10 @@
+import { MultiStepFormPage } from './multi-step-form'
+
 function App() {
   return (
-    <h1 className="text-red-500">App</h1>
+    <div className='flex flex-col items-center justify-center border h-dvh'>
+      <MultiStepFormPage />
+    </div>
   )
 }
 
